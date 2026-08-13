@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const GithubIcon = ({ size = 24 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,7 +46,7 @@ export default function Hero() {
     >
       <div className="flex items-center text-muted tracking-widest text-xs uppercase mb-8 space-x-2">
         <MapPin size={14} />
-        <span>India</span>
+        <span>Jaipur, India</span>
         {time && (
           <>
             <span className="mx-2">•</span>
@@ -56,11 +56,11 @@ export default function Hero() {
       </div>
 
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight mb-6">
-        Hi! I am <br className="hidden md:block" /> Prabhjot Singh
+        Hi! I am <br className="hidden md:block" /> Prabhjot Khalwania
       </h1>
 
       <p className="text-muted text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed">
-        Full Stack Developer with 1+ year of experience building scalable Angular and .NET Web API applications. I design efficient, real-time systems and optimize performance for production-level applications.
+        Software Engineer with experience building enterprise-grade applications using Angular, React and .NET. Adept at analyzing complex systems, designing scalable architectures, and delivering user-focused features. Proficient in Agile/Scrum methodologies, with demonstrated analytical and project management skills to drive cross-functional team success.
       </p>
 
       <div className="flex items-center space-x-6">
@@ -88,3 +88,4 @@ export default function Hero() {
     </motion.section>
   );
 }
+

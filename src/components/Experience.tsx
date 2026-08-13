@@ -5,16 +5,26 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
+      role: "Full Stack Developer",
+      company: "Yashraj Software Pvt Ltd",
+      location: "Jaipur, Rajasthan, India",
+      date: "July 2026 – Present",
+      points: [
+        "Architected scalable full-stack modules using Angular 18 and .NET 8 Web API, reducing API latency by 20% through efficient caching strategies",
+        "Own the complete development lifecycle across frontend, backend, database, and Azure cloud infrastructure – from architecture to deployment",
+        "Deployed containerized applications using Docker on Azure App Services, ensuring 99.9% uptime for production environments",
+      ],
+    },
+    {
       role: "Software Developer",
       company: "Pizone Infotech",
-      date: "March 2025 – Present",
+      location: "India",
+      date: "March 2025 – July 2026",
       points: [
-        "Engineered 5+ Angular frontend modules integrated with .NET Web APIs",
-        "Implemented 10+ RESTful APIs for real-time systems (1000+ daily users)",
-        "Improved API response time by 20%",
-        "Fixed 15+ production issues and reduced downtime by 30%",
-        "Collaborated with 4–6 developers improving delivery speed by 25%",
-        "Conducted 20+ code reviews for clean architecture",
+        "Engineered 5+ Angular frontend modules integrated with .NET Web APIs, supporting 1,000+ daily user interactions",
+        "Developed and optimized 10+ RESTful APIs, improving response time by 20% through efficient query handling and indexing",
+        "Diagnosed and resolved 15+ production issues, reducing downtime by 30% and improving system stability",
+        "Collaborated with a cross-functional team of 4–6 developers, improving delivery timelines by 25%",
       ],
     },
   ];
@@ -50,7 +60,8 @@ export default function Experience() {
                   <h3 className="text-lg font-medium text-foreground mb-1">
                     {exp.role}
                   </h3>
-                  <h4 className="text-md text-muted mb-6">{exp.company}</h4>
+                  <h4 className="text-md text-muted">{exp.company}</h4>
+                  <p className="text-sm text-[#666] mb-6">{exp.location}</p>
                   
                   <ul className="space-y-3">
                     {exp.points.map((point, i) => (

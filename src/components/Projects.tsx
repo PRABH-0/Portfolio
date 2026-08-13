@@ -13,29 +13,26 @@ const GithubIcon = ({ size = 24 }: { size?: number }) => (
 export default function Projects() {
   const projects = [
     {
-      name: "Orbit – Visual File Manager",
-      description: "Graph-based file system handling large scale nodes with real-time updates.",
-      liveUrl: "https://orbit-api-rcpu.onrender.com/",
-      sourceUrl: "https://github.com/PRABH-0", // Assuming they have it on github
+      name: "Engram – Visual Knowledge & File Management System",
+      description: "Infinite-canvas file system with draggable nodes and relational edges, replacing rigid folder trees with a spatial knowledge graph.",
+      liveUrl: "https://engram-api.onrender.com/",
+      sourceUrl: "https://github.com/PRABH-0",
+      tech: "Angular, .NET 8, PostgreSQL",
       features: [
-        "Graph-based file system (1000+ nodes)",
-        "Real-time updates (<1 second latency)",
-        "Secure authentication using Supabase",
-        "Improved navigation efficiency by 30%",
-        "Fully responsive UI"
+        "Engineered a Visual Knowledge System with an infinite canvas and spatial file organization using Repository Pattern and Unit of Work",
+        "Secured user data with JWT Authentication and Google OAuth, and integrated Stripe Webhooks for subscription management",
+        "Implemented Docker containerization and CI/CD pipelines for automated deployment to cloud infrastructure"
       ],
     },
     {
-      name: "Snera – Skill-Based Collaboration Platform",
-      description: "A platform connecting professionals through multi-parameter skill filtering.",
+      name: "Flex Schema – Enterprise Resource Management System",
+      description: "Enterprise-grade management system for hospital and organizational workflows.",
       liveUrl: "",
       sourceUrl: "",
+      tech: "Angular, .NET Core, SQL",
       features: [
-        "Skill matching system with multi-parameter filtering",
-        "Real-time chat and collaboration workspace",
-        "Kanban task management system",
-        "Profile-based user discovery",
-        "Backend built with .NET Web API"
+        "Built and integrated 50+ RESTful APIs using Angular and .NET Core Web API for hospital and organizational management systems",
+        "Wrote and optimized thousands of SQL queries to repair corrupted data; implemented middleware and validation for secure, production-grade APIs",
       ],
     }
   ];
@@ -58,8 +55,11 @@ export default function Projects() {
                   <h3 className="text-lg font-medium text-foreground mb-4">
                     {project.name}
                   </h3>
-                  <p className="text-sm text-muted leading-relaxed mb-6">
+                  <p className="text-sm text-muted leading-relaxed mb-3">
                     {project.description}
+                  </p>
+                  <p className="text-xs text-[#666] tracking-wide mb-6">
+                    {project.tech}
                   </p>
                 </div>
                 <div className="flex space-x-4">

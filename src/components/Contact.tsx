@@ -56,7 +56,11 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Let's work together</h2>
-        <p className="text-muted mb-12 text-sm tracking-wide">Interested in working together? Send me a message.</p>
+        <p className="text-muted mb-8 text-sm tracking-wide">Interested in working together? Send me a message.</p>
+        <div className="flex flex-col space-y-2 mb-12 text-sm text-muted">
+          <p><span className="text-foreground font-medium">Email:</span> prabh.khalwania@gmail.com</p>
+          <p><span className="text-foreground font-medium">Phone:</span> +91 6375157148</p>
+        </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col space-y-6 max-w-2xl">
           <div className="flex flex-col space-y-2">

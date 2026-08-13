@@ -55,7 +55,7 @@ export default function Navbar() {
             }`}
           >
            <button onClick={scrollToTop} className="text-xl font-bold tracking-tight text-foreground cursor-pointer hover:text-[#fff] transition-colors">
-             Prabhjot Singh
+             Prabhjot Khalwania
            </button>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link 
-            href="/PrabhjotResume2026.pdf" 
+            href="/PrabhKhalwania2026.pdf" 
             target="_blank" 
             className="hover:text-foreground transition-colors duration-200"
           >

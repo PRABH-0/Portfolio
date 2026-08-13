@@ -5,16 +5,24 @@ import { motion } from "framer-motion";
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend Engineering",
-      skills: ["Angular", "Next.js", "TypeScript"]
+      title: "Languages & Backend",
+      skills: ["C#", "Java", "Python", ".NET 8", "ASP.NET Core", "C++", "Entity Framework Core"]
     },
     {
-      title: "Backend Engineering",
-      skills: [".NET Web API", "C#"]
+      title: "Frontend",
+      skills: ["Angular", "React", "TypeScript", "RxJS", "HTML5", "CSS3"]
     },
     {
-      title: "Databases & Tools",
-      skills: ["MySQL", "SQL Server (SSMS)", "Supabase", "Git", "Azure"]
+      title: "Databases",
+      skills: ["SQL Server", "PostgreSQL"]
+    },
+    {
+      title: "Tools & Platforms",
+      skills: ["Git", "Azure", "Docker", "Supabase", "CI/CD"]
+    },
+    {
+      title: "Methodologies & Testing",
+      skills: ["Scrum", "SDLC", "Postman"]
     }
   ];
 
@@ -29,7 +37,7 @@ export default function Skills() {
         >
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Expertise</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skillCategories.map((category, index) => (
               <div 
                 key={index}

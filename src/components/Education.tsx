@@ -5,13 +5,15 @@ import { motion } from "framer-motion";
 export default function Education() {
   const education = [
     {
-      degree: "Master of Computer Science (M.Sc)",
+      degree: "Master of Computer Science (M.Sc.)",
       institution: "Maharaja Ganga Singh University",
+      location: "Bikaner, Rajasthan, India",
       date: "2025 – Present"
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
       institution: "Maharaja Ganga Singh University",
+      location: "Bikaner, Rajasthan, India",
       date: "2022 – 2025"
     }
   ];
@@ -46,6 +48,7 @@ export default function Education() {
                 <div className="md:w-3/4 pl-8 md:pl-12 pb-2">
                   <h3 className="text-lg font-medium text-foreground mb-1">{edu.degree}</h3>
                   <h4 className="text-md text-muted">{edu.institution}</h4>
+                  <p className="text-sm text-[#666]">{edu.location}</p>
                 </div>
               </div>
             ))}

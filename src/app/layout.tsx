@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Prabhjot Singh | Full Stack Developer",
-  description: "Portfolio of Prabhjot Singh, Full Stack Developer building scalable applications.",
+  title: "Prabhjot Khalwania | Full Stack Developer",
+  description: "Portfolio of Prabhjot Khalwania, Full Stack Developer building scalable applications.",
 };
 
 import Background from "@/components/Background";
