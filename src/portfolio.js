@@ -131,6 +131,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Maharaja Ganga Singh University",
+      logo: require("./assets/images/mgsuLogo.png"),
       subHeader: "Master of Computer Science (M.Sc.)",
       duration: "March 2025 – Present",
       desc: "Bikaner, Rajasthan, India",
@@ -141,6 +142,7 @@ const educationInfo = {
     },
     {
       schoolName: "Maharaja Ganga Singh University",
+      logo: require("./assets/images/mgsuLogo.png"),
       subHeader: "Bachelor of Computer Applications (BCA)",
       duration: "March 2022 – March 2025",
       desc: "Bikaner, Rajasthan, India",

@@ -64,6 +64,24 @@
   box-shadow: 0 8px 24px rgba(108, 99, 255, 0.2);
 }
 
+.education-school-logo {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.education-card:hover .education-school-logo {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(7, 158, 179, 0.35);
+  border-color: rgba(7, 158, 179, 0.8);
+}
+
 .dark-mode .education-icon-box {
   background: rgba(108, 99, 255, 0.18);
   border: 1px solid rgba(108, 99, 255, 0.45);
@@ -130,6 +148,12 @@
     margin-bottom: 0.5rem;
     margin-right: 0px;
   }
+  .education-school-logo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -147,6 +171,11 @@
     width: 4rem;
     height: 4rem;
     font-size: 1.6rem;
+  }
+  .education-school-logo {
+    margin: 10px auto 1rem auto;
+    width: 4rem;
+    height: 4rem;
   }
   .education-text-bullets > ul {
     max-width: 80%;
