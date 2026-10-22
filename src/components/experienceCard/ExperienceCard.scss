@@ -122,6 +122,7 @@
 
 .experience-text-desc {
   text-align: center;
+  min-height: 5.5rem;
 }
 
 .experience-text-details {
@@ -138,6 +139,7 @@
   transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.collapsed {
+    height: 155px;
     max-height: 155px;
 
     &::after {
@@ -157,6 +159,7 @@
   }
 
   &.expanded {
+    height: auto;
     max-height: 1500px;
   }
 }
@@ -249,5 +252,9 @@
   }
   .experience-text-desc {
     font-size: 16px;
+    min-height: auto;
+  }
+  .experience-bullets-wrapper.collapsed {
+    height: auto;
   }
 }
