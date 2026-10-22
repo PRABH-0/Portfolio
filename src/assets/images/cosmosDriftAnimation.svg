@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <style>
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes sunPulse {
+        0%, 100% { transform: scale(1); opacity: 0.95; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+      @keyframes glowPulse {
+        0%, 100% { transform: scale(1); opacity: 0.25; }
+        50% { transform: scale(1.25); opacity: 0.5; }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.25; }
+        50% { opacity: 1; }
+      }
+      .orbit-group {
+        transform-origin: 50px 50px;
+        animation: orbit 4s linear infinite;
+      }
+      .sun-core {
+        transform-origin: 50px 50px;
+        animation: sunPulse 2.4s ease-in-out infinite;
+      }
+      .sun-glow {
+        transform-origin: 50px 50px;
+        animation: glowPulse 2.4s ease-in-out infinite;
+      }
+      .star {
+        animation: twinkle 2s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Linear Gradients -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c1a" />
+      <stop offset="100%" stop-color="#141226" />
+    </linearGradient>
+
+    <radialGradient id="sunGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fff5cc" />
+      <stop offset="50%" stop-color="#ffb703" />
+      <stop offset="100%" stop-color="#fb8500" />
+    </radialGradient>
+
+    <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Clean Dark App Icon Background -->
+  <rect width="100" height="100" rx="22" fill="url(#bg)" stroke="#262347" stroke-width="1.5" />
+
+  <!-- Subtle Minimalist Stars -->
+  <circle cx="22" cy="24" r="1" fill="#ffffff" class="star" />
+  <circle cx="78" cy="76" r="1.2" fill="#00e5ff" class="star" style="animation-delay: 1s;" />
+  <circle cx="82" cy="26" r="0.8" fill="#ffffff" opacity="0.6" />
+  <circle cx="18" cy="74" r="0.8" fill="#ffffff" opacity="0.5" />
+
+  <!-- Clean 2D Orbit Ring -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#00e5ff" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.35" />
+
+  <!-- 2D Sun Outer Glow -->
+  <circle cx="50" cy="50" r="18" fill="#ffb703" class="sun-glow" />
+
+  <!-- 2D Sun Body -->
+  <circle cx="50" cy="50" r="11" fill="url(#sunGrad)" class="sun-core" />
+  <circle cx="48" cy="48" r="3.5" fill="#ffffff" opacity="0.6" class="sun-core" />
+
+  <!-- 2D Orbiting Planet with Ion Trail (SMIL + CSS Keyframe support) -->
+  <g class="orbit-group">
+    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="4s" repeatCount="indefinite" />
+
+    <!-- Cyan Drift Thruster Trail -->
+    <path d="M 38,20 Q 44,20 49,20" stroke="url(#tailGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- 2D Planet -->
+    <circle cx="50" cy="20" r="4.5" fill="#00e5ff" />
+    <circle cx="49" cy="19" r="1.5" fill="#ffffff" opacity="0.85" />
+  </g>
+</svg>
