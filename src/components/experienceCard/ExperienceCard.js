@@ -89,25 +89,20 @@ export default function ExperienceCard({cardInfo, isDark}) {
             />
           </ul>
         </div>
-
-        {cardInfo.descBullets && cardInfo.descBullets.length > 1 && (
-          <div className="experience-expand-btn-div">
-            <button
-              type="button"
-              className={`experience-expand-btn ${isDark ? "dark-btn" : ""}`}
-              onClick={() => setIsExpanded(!isExpanded)}
-              aria-expanded={isExpanded}
-            >
-              <span>{isExpanded ? "Show less" : "Read all description"}</span>
-              <i
-                className={`fas fa-chevron-${
-                  isExpanded ? "up" : "down"
-                } expand-arrow`}
-              ></i>
-            </button>
-          </div>
-        )}
       </div>
+
+      {cardInfo.descBullets && cardInfo.descBullets.length > 1 && (
+        <button
+          type="button"
+          className="experience-border-arrow-btn"
+          onClick={() => setIsExpanded(!isExpanded)}
+          aria-expanded={isExpanded}
+          aria-label={isExpanded ? "Show less" : "Read all description"}
+          title={isExpanded ? "Show less" : "Read all description"}
+        >
+          <i className={`fas fa-chevron-${isExpanded ? "up" : "down"}`}></i>
+        </button>
+      )}
     </div>
   );
 }
