@@ -4,6 +4,7 @@ import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false);
   const imgRef = createRef();
 
   function getColorArrays() {
@@ -75,9 +76,37 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.desc}
         </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+
+        <div
+          className={`experience-bullets-wrapper ${
+            isExpanded ? "expanded" : "collapsed"
+          }`}
+        >
+          <ul>
+            <GetDescBullets
+              descBullets={cardInfo.descBullets}
+              isDark={isDark}
+            />
+          </ul>
+        </div>
+
+        {cardInfo.descBullets && cardInfo.descBullets.length > 1 && (
+          <div className="experience-expand-btn-div">
+            <button
+              type="button"
+              className={`experience-expand-btn ${isDark ? "dark-btn" : ""}`}
+              onClick={() => setIsExpanded(!isExpanded)}
+              aria-expanded={isExpanded}
+            >
+              <span>{isExpanded ? "Show less" : "Read all description"}</span>
+              <i
+                className={`fas fa-chevron-${
+                  isExpanded ? "up" : "down"
+                } expand-arrow`}
+              ></i>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

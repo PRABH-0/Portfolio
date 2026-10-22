@@ -6,6 +6,8 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-card-dark {
@@ -14,6 +16,8 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-card:hover {
@@ -119,6 +123,95 @@
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.experience-bullets-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.collapsed {
+    max-height: 155px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        $lightBackground2 100%
+      );
+      pointer-events: none;
+    }
+  }
+
+  &.expanded {
+    max-height: 1500px;
+  }
+}
+
+.experience-card-dark .experience-bullets-wrapper.collapsed::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 28, 40, 0) 0%,
+    $darkBackground 100%
+  );
+}
+
+.experience-expand-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.experience-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(108, 99, 255, 0.08);
+  color: #6c63ff;
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  border-radius: 20px;
+  padding: 0.45rem 1.15rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+
+  .expand-arrow {
+    font-size: 12px;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &:hover {
+    background: rgba(108, 99, 255, 0.18);
+    border-color: rgba(108, 99, 255, 0.6);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+  }
+
+  &.dark-btn {
+    background: rgba(7, 158, 179, 0.12);
+    color: #4dd0e1;
+    border: 1px solid rgba(7, 158, 179, 0.35);
+
+    &:hover {
+      background: rgba(7, 158, 179, 0.22);
+      border-color: rgba(7, 158, 179, 0.7);
+      color: #80deea;
+      box-shadow: 0 4px 14px rgba(7, 158, 179, 0.25);
+    }
+  }
 }
 
 /* Media Query */
