@@ -21,6 +21,7 @@
     "sass": "^1.32.8"
   },
   "scripts": {
+    "dev": "npm start",
     "predeploy": "npm run build",
     "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
